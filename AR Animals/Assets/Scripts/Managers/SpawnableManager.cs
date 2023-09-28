@@ -9,7 +9,7 @@ public class SpawnableManager : MonoBehaviour
     public GameEvent onAnimalClick;
     
     [SerializeField] private ARRaycastManager _arRaycastManager;
-    private List<ARRaycastHit> _hits = new List<ARRaycastHit>();
+    private List<ARRaycastHit> _hits = new();
 
     [SerializeField] private GameObject spawnablePrefab;
 
