@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 555796e13f594f340829cb8fbb0d1e3b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.06
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 555796e13f594f340829cb8fbb0d1e3b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.06
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 555796e13f594f340829cb8fbb0d1e3b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.06
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 555796e13f594f340829cb8fbb0d1e3b,
         type: 3}
@@ -114,7 +114,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &7719786414219280592
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -128,6 +128,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
