@@ -86,7 +86,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 555796e13f594f340829cb8fbb0d1e3b,
         type: 3}
       propertyPath: m_TagString
-      value: Animal
+      value: Dog
       objectReference: {fileID: 0}
     - target: {fileID: 6214285409377921796, guid: 555796e13f594f340829cb8fbb0d1e3b,
         type: 3}
@@ -105,6 +105,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2606555223436600404}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 555796e13f594f340829cb8fbb0d1e3b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6284388789191038201}
   m_SourcePrefab: {fileID: 100100000, guid: 555796e13f594f340829cb8fbb0d1e3b, type: 3}
 --- !u!1 &3176936270733182763 stripped
 GameObject:
@@ -155,3 +159,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1908538, y: 2.8366148, z: 3.9281847}
   m_Center: {x: 0.00023009875, y: 1.2905605, z: 0.42178842}
+--- !u!64 &-6284388789191038201
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3176936270733182763}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}

@@ -36,10 +36,15 @@ public class SpawnableManager : MonoBehaviour
                 Ray ray = arCam.ScreenPointToRay(Input.GetTouch(0).position);
                 if (Physics.Raycast(ray, out var hit))
                 {
-                    if (hit.collider.gameObject.CompareTag("Animal"))
+                    if (hit.collider.gameObject.CompareTag("Dog"))
                     {
                         spawnedObject = hit.collider.gameObject;
-                        onAnimalClick.Raise();
+                        onAnimalClick.Raise("Dog");
+                    }
+                    if (hit.collider.gameObject.CompareTag("Cube"))
+                    {
+                        spawnedObject = hit.collider.gameObject;
+                        onAnimalClick.Raise("Cube");
                     }
                     else
                     {
@@ -47,7 +52,9 @@ public class SpawnableManager : MonoBehaviour
                     }
                 }
             }
-            else if (Input.GetTouch(0).phase == TouchPhase.Moved && spawnedObject != null)
+            
+            //if we want to drag and drop
+            /*else if (Input.GetTouch(0).phase == TouchPhase.Moved && spawnedObject != null)
             {
                 spawnedObject.transform.position = _hits[0].pose.position;
             }
@@ -56,7 +63,9 @@ public class SpawnableManager : MonoBehaviour
             {
                 spawnedObject = null;
             }
+            */
         }
+        
     }
 
     private void SpawnPrefab(Vector3 spawnPosition)

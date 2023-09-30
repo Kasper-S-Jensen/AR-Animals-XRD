@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1302092304595435246}
   - component: {fileID: 7950092154447631577}
   m_Layer: 0
-  m_Name: Food
+  m_Name: Banana
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,10 +28,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5296237616212616237}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.09666911, y: -0.6988136, z: 0.09620593, w: 0.7021817}
-  m_LocalPosition: {x: 0.008827624, y: -0.12684779, z: 3.7438295}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5ef362fe14ac849499dcc1e6ae56da17, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
