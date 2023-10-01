@@ -7,6 +7,9 @@ TagManager:
   - Animal
   - Dog
   - Cube
+  - Stag
+  - Meat
+  - Plant
   layers:
   - Default
   - TransparentFX
@@ -14,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Ground
+  - Food
   - 
   - 
   - 

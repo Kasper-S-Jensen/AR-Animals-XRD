@@ -37,3 +37,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: Mic
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4636830857797134628
+      m_GuidHigh: 14373456132726818694
+    m_SerializedTextureGuid:
+      m_GuidLow: 9805469737693253802
+      m_GuidHigh: 10331785711687869705
+    m_Size: {x: 0.13, y: 0.22283581}
+    m_SpecifySize: 1
+    m_Name: kut
+    m_Texture: {fileID: 2800000, guid: 5b0c90aa06c6881409a59c585de0618f, type: 3}

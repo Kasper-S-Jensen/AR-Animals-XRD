@@ -9,7 +9,7 @@ public class FoodThrower : MonoBehaviour
      private int _foodIndex;
     public Transform arCamera;
     public float shootForce = 10f;
-
+ 
     public void ShootObject()
     {
         // Instantiate the object at the shootPoint's position and rotation
@@ -17,7 +17,7 @@ public class FoodThrower : MonoBehaviour
 
         // Get the Rigidbody component of the new object
         var rb = newObject.GetComponent<Rigidbody>();
-
+       
         if (rb != null)
         {
             // Apply a force to shoot the object

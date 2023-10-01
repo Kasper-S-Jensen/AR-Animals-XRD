@@ -41,10 +41,10 @@ public class SpawnableManager : MonoBehaviour
                         spawnedObject = hit.collider.gameObject;
                         onAnimalClick.Raise("Dog");
                     }
-                    if (hit.collider.gameObject.CompareTag("Cube"))
+                    if (hit.collider.gameObject.CompareTag("Stag"))
                     {
                         spawnedObject = hit.collider.gameObject;
-                        onAnimalClick.Raise("Cube");
+                        onAnimalClick.Raise("Stag");
                     }
                     else
                     {
