@@ -28,12 +28,13 @@ namespace Characters.Enemy.Scripts
 
         private void Start()
         {
-            CheckState();
+            transform.position = new Vector3(0, 0, 0);
+           // CheckState();
         }
 
         private void Update()
         {
-            CheckState();
+        //    CheckState();
         }
 
         private void OnDestroy()
