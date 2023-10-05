@@ -9,6 +9,7 @@ public class UIController : MonoBehaviour
     public TextMeshProUGUI noiseButton;
     public TextMeshProUGUI selectedAnimaltext;
 
+    private string currentlySelectedAnimal;
     private int _count = 0;
 
     //game events
@@ -25,9 +26,7 @@ public class UIController : MonoBehaviour
 
     public void ClickNoiseButton()
     {
-        _count++;
-        onNoiseButtonClick.Raise();
-        noiseButton.text = "Noise: " + _count;
+        onNoiseButtonClick.Raise(currentlySelectedAnimal);
     }
 
     public void UpdateSelectedAnimalText(Component sender, object data)
@@ -35,7 +34,10 @@ public class UIController : MonoBehaviour
         selectedAnimaltext.text = "Currently selected animal:" + data;
     }
 
-    
+    public void UpdateSelectedAnimal(Component sender, object data)
+    {
+        currentlySelectedAnimal = data.ToString();
+    }
 
 
     public void DropdownSelect(int index)

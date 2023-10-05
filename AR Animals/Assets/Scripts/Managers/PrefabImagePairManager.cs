@@ -17,6 +17,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
     [RequireComponent(typeof(ARTrackedImageManager))]
     public class PrefabImagePairManager : MonoBehaviour, ISerializationCallbackReceiver
     {
+        
+        public GameObject deerEnv;
         /// <summary>
         /// Used to associate an `XRReferenceImage` with a Prefab by using the `XRReferenceImage`'s guid as a unique identifier for a particular reference image.
         /// </summary>
@@ -26,6 +28,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             // System.Guid isn't serializable, so we store the Guid as a string. At runtime, this is converted back to a System.Guid
             public string imageGuid;
             public GameObject imagePrefab;
+           
 
             public NamedPrefab(Guid guid, GameObject prefab)
             {

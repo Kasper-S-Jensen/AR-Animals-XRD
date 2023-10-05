@@ -859,8 +859,8 @@ GameObject:
   - component: {fileID: 5278500348525786476}
   - component: {fileID: 7253094258370491145}
   m_Layer: 0
-  m_Name: FullPortal
-  m_TagString: Untagged
+  m_Name: WolfPortal
+  m_TagString: WolfPortal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -891,14 +891,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4741690701910609004}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c2b4fe7eb902674ab1e7e272fdd4f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalList:
-  - {fileID: 7782967940439645218, guid: 28f320d2de5e02940a6db164a5cb63a6, type: 3}
-  planeObject: {fileID: 9138055012157925878}
 --- !u!1 &5181234308300120482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,10 +2308,20 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2925270721019586535, guid: 09a27eb92dd39244ba5f14bdac47fcf8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3698392762132032252, guid: 09a27eb92dd39244ba5f14bdac47fcf8,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5362594838033389167, guid: 09a27eb92dd39244ba5f14bdac47fcf8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5399427983259669853, guid: 09a27eb92dd39244ba5f14bdac47fcf8,
         type: 3}
@@ -2330,6 +2337,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.053
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785465217463874511, guid: 09a27eb92dd39244ba5f14bdac47fcf8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7659816033749474207, guid: 09a27eb92dd39244ba5f14bdac47fcf8,
         type: 3}
@@ -2757,6 +2769,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 681780851099338027}
     m_Modifications:
+    - target: {fileID: 1503507173109166936, guid: 28f320d2de5e02940a6db164a5cb63a6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3993660871320723925, guid: 28f320d2de5e02940a6db164a5cb63a6,
         type: 3}
       propertyPath: m_Enabled

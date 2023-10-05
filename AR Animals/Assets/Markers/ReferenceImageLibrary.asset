@@ -21,9 +21,9 @@ MonoBehaviour:
       m_GuidLow: 5454047361011458453
       m_GuidHigh: 6485974621009827205
     m_SerializedTextureGuid:
-      m_GuidLow: 5540758998572834696
-      m_GuidHigh: 11423852310933898634
-    m_Size: {x: 0.13, y: 0.13}
+      m_GuidLow: 6725017290937476903
+      m_GuidHigh: 15745272133139818458
+    m_Size: {x: 0.295, y: 0.295}
     m_SpecifySize: 1
     m_Name: Wolf
     m_Texture: {fileID: 0}
@@ -31,19 +31,19 @@ MonoBehaviour:
       m_GuidLow: 5547921307440860259
       m_GuidHigh: 13921073494310459271
     m_SerializedTextureGuid:
-      m_GuidLow: 12102344655058342484
-      m_GuidHigh: 15323300673643507690
-    m_Size: {x: 0.13, y: 0.19207081}
+      m_GuidLow: 703793611579505566
+      m_GuidHigh: 10255669694875749258
+    m_Size: {x: 0.295, y: 0.45266625}
     m_SpecifySize: 1
     m_Name: Stag
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 4636830857797134628
-      m_GuidHigh: 14373456132726818694
+      m_GuidLow: 4869457179987414486
+      m_GuidHigh: 7308730417254172079
     m_SerializedTextureGuid:
-      m_GuidLow: 9805469737693253802
-      m_GuidHigh: 10331785711687869705
-    m_Size: {x: 0.13, y: 0.22283581}
+      m_GuidLow: 68818406561371118
+      m_GuidHigh: 11493544698650175032
+    m_Size: {x: 0.12, y: 0.13271523}
     m_SpecifySize: 1
     m_Name: Portal
-    m_Texture: {fileID: 2800000, guid: 5b0c90aa06c6881409a59c585de0618f, type: 3}
+    m_Texture: {fileID: 0}

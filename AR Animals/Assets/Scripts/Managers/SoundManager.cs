@@ -52,7 +52,19 @@ public class SoundManager : MonoBehaviour
     
     public void ButtonSound(Component sender, object data)
     {
-        PlayAudioClip("Test");
+        if (data.ToString().Equals("Stag"))
+        {
+            PlayAudioClip("Stag");
+        }
+        else if (data.ToString().Equals("Dog"))
+        {
+            PlayAudioClip("Wolf");
+        }
+        else
+        {
+            PlayAudioClip("No animal");
+        }
+       
     }
     
     

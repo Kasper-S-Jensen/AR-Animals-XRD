@@ -784,6 +784,7 @@ GameObject:
   - component: {fileID: 463042020}
   - component: {fileID: 463042019}
   - component: {fileID: 463042018}
+  - component: {fileID: 463042023}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1000,6 +1001,23 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &463042023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463042016}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b15f82cc229284894964d2d30806969d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HumanSegmentationStencilMode: 1
+  m_HumanSegmentationDepthMode: 1
+  m_EnvironmentDepthMode: 1
+  m_EnvironmentDepthTemporalSmoothing: 1
+  m_OcclusionPreferenceMode: 1
 --- !u!1 &471016528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691f848838ef9a743bd6b2f8616f831c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deerEnv: {fileID: 0}
   m_PrefabsList:
   - imageGuid: 953ea195-ab2d-4bb0-8555-7dbb8dcf025a
     imagePrefab: {fileID: 3093048898771810786, guid: 07de248cbe5dd7348ae2088a828c1b5a,
@@ -1307,7 +1326,7 @@ MonoBehaviour:
   - imageGuid: f3d54c63-2d08-4cfe-8717-7b08969631c1
     imagePrefab: {fileID: 4132434685715048133, guid: cc2a5ab0a0efa0f4995eed4a2b3265cc,
       type: 3}
-  - imageGuid: 22916924-5519-4059-8687-d7e932c678c7
+  - imageGuid: 76200dd6-c981-4393-af05-875797d36d65
     imagePrefab: {fileID: 4741690701910609004, guid: b4bb26b27dc7f8441a365ec9e6d258f0,
       type: 3}
   m_ImageLibrary: {fileID: 11400000, guid: 5a84d536120badd4f82be51ab166f381, type: 2}
@@ -1729,8 +1748,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - clipName: Test
-    clip: {fileID: 8300000, guid: 4f578cbe5d595e94d936dc013d225477, type: 3}
+  - clipName: Wolf
+    clip: {fileID: 8300000, guid: 6e189da240be2704d94f98eb63e83c46, type: 3}
+  - clipName: Stag
+    clip: {fileID: 8300000, guid: 812f0cad6f2146b4c95075aa57d671a4, type: 3}
+  - clipName: No animal
+    clip: {fileID: 8300000, guid: 2ab1d1dffb998044b80d230ea4e38d88, type: 3}
   mixerGroup: {fileID: 24300002, guid: 8554156853b98804e895091e340e4f53, type: 2}
 --- !u!4 &870342709
 Transform:
@@ -2476,13 +2499,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86357237fcf207947956da319987f74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: ffc5e184b8a756141b0530c3b9b1199d, type: 2}
+  gameEvent: {fileID: 11400000, guid: f4d15f5d70388914e90217ebb3b75a4d, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1351191295}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: UpdateSelectedAnimalText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1351191295}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: UpdateSelectedAnimal
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

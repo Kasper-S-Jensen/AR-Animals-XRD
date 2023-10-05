@@ -1,36 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Tags
+{
+    WolfPortal,
+    DeerPortal
+}
 public class PortalManager : MonoBehaviour
 {
-    
-    public GameObject[] animalList;
-    private int _animalIndex=0;
-    public Transform  planeObject;
-
-   
-    private Vector3 planeCenter;
-    void Start()
+    private void Start()
     {
-        CalculatePlaneCenter();
-        // Instantiate the object at the shootPoint's position and rotation
-       Instantiate(animalList[_animalIndex], planeCenter, Quaternion.identity);
+        if (gameObject.CompareTag(Tags.WolfPortal.ToString()))
+        {
+            DestroyPortal(Tags.DeerPortal.ToString());
+        }
+      
+        if (gameObject.CompareTag(Tags.DeerPortal.ToString()))
+        {
+           DestroyPortal(Tags.WolfPortal.ToString());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private static void DestroyPortal(string tag)
     {
-       
-    }
-    
-    void CalculatePlaneCenter()
-    {
-        // Calculate the center of the plane based on its current position and size
-        Renderer planeRenderer = planeObject.GetComponent<Renderer>(); // Assuming the plane has a renderer
-        Bounds planeBounds = planeRenderer.bounds;
-
-        // Calculate the center based on the bounds
-        planeCenter = planeBounds.center;
+        var objectToDestroy = GameObject.FindWithTag(tag);
+        if (objectToDestroy != null)
+        {
+            // Destroy the GameObject if it's found
+            Destroy(objectToDestroy);
+        }
     }
 }
