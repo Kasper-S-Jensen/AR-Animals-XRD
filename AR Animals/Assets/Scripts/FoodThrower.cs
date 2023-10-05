@@ -32,11 +32,11 @@ public class FoodThrower : MonoBehaviour
             return;
         }
 
-        if (foodName=="Carrot")
+        if (foodName=="Lettuce")
         {
             _foodIndex = 0;
         }
-        if (foodName=="Banana")
+        if (foodName=="Meat")
         {
             _foodIndex = 1;
         }

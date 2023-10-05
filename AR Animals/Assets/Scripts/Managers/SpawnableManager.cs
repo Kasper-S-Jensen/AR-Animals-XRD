@@ -31,7 +31,7 @@ public class SpawnableManager : MonoBehaviour
 
         if (_arRaycastManager.Raycast(Input.GetTouch(0).position, _hits))
         {
-            if (Input.GetTouch(0).phase == TouchPhase.Began && spawnedObject == null)
+            if (Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 Ray ray = arCam.ScreenPointToRay(Input.GetTouch(0).position);
                 if (Physics.Raycast(ray, out var hit))
