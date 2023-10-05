@@ -13,11 +13,10 @@ public class SoundManager : MonoBehaviour
     private List<AudioSource> audioSources;
 
     private Dictionary<string, AudioClip> clipDictionary;
-  
+
 
     private void Awake()
     {
-
         //create list of audioinfos
         clipDictionary = new Dictionary<string, AudioClip>();
         foreach (var clip in audioClips)
@@ -42,14 +41,13 @@ public class SoundManager : MonoBehaviour
             audioSources.Add(source);
         }
 
-     //   PlayAudioClip("Background");
+        //   PlayAudioClip("Background");
     }
 
     private void Start()
     {
-     
     }
-    
+
     public void ButtonSound(Component sender, object data)
     {
         if (data.ToString().Equals("Stag"))
@@ -64,11 +62,12 @@ public class SoundManager : MonoBehaviour
         {
             PlayAudioClip("No animal");
         }
-       
     }
-    
-    
-    
+
+    public void AnimalClick(Component sender, object data)
+    {
+        PlayAudioClip("Click");
+    }
 
 
     private void PlayAudioClip(string clipName)

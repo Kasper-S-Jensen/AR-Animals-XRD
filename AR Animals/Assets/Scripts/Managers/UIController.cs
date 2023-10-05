@@ -8,25 +8,26 @@ public class UIController : MonoBehaviour
     //ui elements
     public TextMeshProUGUI noiseButton;
     public TextMeshProUGUI selectedAnimaltext;
-
-    private string currentlySelectedAnimal;
+    public TextMeshProUGUI informationText;
+    private string _currentlySelectedAnimal="";
     private int _count = 0;
 
     //game events
     public GameEvent onNoiseButtonClick;
     public GameEvent onSwitchFood;
+    public GameEvent onAppStart;
    
 
 
     // Start is called before the first frame update
     private void Start()
     {
-        //initialize ui text
+     onAppStart.Raise();
     }
 
     public void ClickNoiseButton()
     {
-        onNoiseButtonClick.Raise(currentlySelectedAnimal);
+        onNoiseButtonClick.Raise(_currentlySelectedAnimal);
     }
 
     public void UpdateSelectedAnimalText(Component sender, object data)
@@ -36,7 +37,7 @@ public class UIController : MonoBehaviour
 
     public void UpdateSelectedAnimal(Component sender, object data)
     {
-        currentlySelectedAnimal = data.ToString();
+        _currentlySelectedAnimal = data.ToString();
     }
 
 
@@ -50,5 +51,25 @@ public class UIController : MonoBehaviour
         {
             onSwitchFood.Raise("Meat");
         }
+    }
+    public void ScanEnvironmentPrompt(Component sender, object data)
+    {
+        informationText.text = "Please take a few moments to scan your environment";
+        StartCoroutine(ActivateForSeconds(informationText.gameObject, 3));
+    }
+    public void SelectAnimalPrompt(Component sender, object data)
+    {
+        if (_currentlySelectedAnimal=="")
+        {
+            informationText.text = "Please select an animal";
+            StartCoroutine(ActivateForSeconds(informationText.gameObject, 3));
+        }
+    }
+    
+    private IEnumerator ActivateForSeconds(GameObject go, float seconds)
+    {
+        go.SetActive(true);
+        yield return new WaitForSeconds(seconds);
+        go.SetActive(false);
     }
 }
