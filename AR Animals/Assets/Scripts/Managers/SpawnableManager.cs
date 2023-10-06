@@ -7,18 +7,17 @@ using UnityEngine.XR.ARFoundation;
 public class SpawnableManager : MonoBehaviour
 {
     public GameEvent onAnimalClick;
-    
+
     [SerializeField] private ARRaycastManager _arRaycastManager;
     private List<ARRaycastHit> _hits = new();
 
     [SerializeField] private GameObject spawnablePrefab;
 
     private Camera arCam;
-    private GameObject spawnedObject;
+
 
     private void Start()
     {
-        spawnedObject = null;
         arCam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
@@ -29,32 +28,33 @@ public class SpawnableManager : MonoBehaviour
             return;
         }
 
-        if (_arRaycastManager.Raycast(Input.GetTouch(0).position, _hits))
+        if (!_arRaycastManager.Raycast(Input.GetTouch(0).position, _hits))
         {
-            if (Input.GetTouch(0).phase == TouchPhase.Began)
-            {
-                Ray ray = arCam.ScreenPointToRay(Input.GetTouch(0).position);
-                if (Physics.Raycast(ray, out var hit))
-                {
-                    if (hit.collider.gameObject.CompareTag("Dog"))
-                    {
-                        spawnedObject = hit.collider.gameObject;
-                        onAnimalClick.Raise("Dog");
-                    }
-                    if (hit.collider.gameObject.CompareTag("Stag"))
-                    {
-                        spawnedObject = hit.collider.gameObject;
-                        onAnimalClick.Raise("Stag");
-                    }
-                    else
-                    {
-                     //   SpawnPrefab(_hits[0].pose.position);
-                    }
-                }
-            }
-            
-            //if we want to drag and drop
-            /*else if (Input.GetTouch(0).phase == TouchPhase.Moved && spawnedObject != null)
+            return;
+        }
+
+        if (Input.GetTouch(0).phase != TouchPhase.Began)
+        {
+            return;
+        }
+
+        var ray = arCam.ScreenPointToRay(Input.GetTouch(0).position);
+        if (!Physics.Raycast(ray, out var hit))
+        {
+            return;
+        }
+
+        if (hit.collider.gameObject.CompareTag("Dog"))
+        {
+            onAnimalClick.Raise("Dog");
+        }
+        else if (hit.collider.gameObject.CompareTag("Stag"))
+        {
+            onAnimalClick.Raise("Stag");
+        }
+
+        //if we want to drag and drop
+        /*else if (Input.GetTouch(0).phase == TouchPhase.Moved && spawnedObject != null)
             {
                 spawnedObject.transform.position = _hits[0].pose.position;
             }
@@ -64,12 +64,21 @@ public class SpawnableManager : MonoBehaviour
                 spawnedObject = null;
             }
             */
-        }
-        
     }
-
-    private void SpawnPrefab(Vector3 spawnPosition)
+    public void DeleteAllPrefabs(Component sender, object data)
     {
-        spawnedObject = Instantiate(spawnablePrefab, spawnPosition, Quaternion.identity);
+        DestroyByTag("Dog");
+        DestroyByTag("Stag");
+        DestroyByTag("WolfPortal");
+    }
+    
+    private static void DestroyByTag(string tag)
+    {
+        var objectToDestroy = GameObject.FindWithTag(tag);
+        if (objectToDestroy != null)
+        {
+            // Destroy the GameObject if it's found
+            Destroy(objectToDestroy);
+        }
     }
 }

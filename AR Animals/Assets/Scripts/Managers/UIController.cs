@@ -14,6 +14,7 @@ public class UIController : MonoBehaviour
 
     //game events
     public GameEvent onNoiseButtonClick;
+    public GameEvent onDeleteAllButtonClick;
     public GameEvent onSwitchFood;
     public GameEvent onAppStart;
    
@@ -28,6 +29,11 @@ public class UIController : MonoBehaviour
     public void ClickNoiseButton()
     {
         onNoiseButtonClick.Raise(_currentlySelectedAnimal);
+    }
+    
+    public void ClickDeleteAllButton()
+    {
+        onDeleteAllButtonClick.Raise("");
     }
 
     public void UpdateSelectedAnimalText(Component sender, object data)
@@ -55,7 +61,7 @@ public class UIController : MonoBehaviour
     public void ScanEnvironmentPrompt(Component sender, object data)
     {
         informationText.text = "Please take a few moments to scan your environment";
-        StartCoroutine(ActivateForSeconds(informationText.gameObject, 3));
+        StartCoroutine(ActivateForSeconds(informationText.gameObject, 5));
     }
     public void SelectAnimalPrompt(Component sender, object data)
     {
