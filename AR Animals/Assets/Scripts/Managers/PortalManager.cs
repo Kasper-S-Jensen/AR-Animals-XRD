@@ -10,8 +10,11 @@ public enum Tags
 }
 public class PortalManager : MonoBehaviour
 {
+
+    public GameEvent onPortalSpawn;
     private void Start()
     {
+        onPortalSpawn.Raise("");
         if (gameObject.CompareTag(Tags.WolfPortal.ToString()))
         {
             DestroyPortal(Tags.DeerPortal.ToString());

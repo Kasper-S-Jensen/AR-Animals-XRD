@@ -582,17 +582,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8f8325c3f4f37e44bbaec6f6fc3bf3ca,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f8325c3f4f37e44bbaec6f6fc3bf3ca,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f8325c3f4f37e44bbaec6f6fc3bf3ca,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f8325c3f4f37e44bbaec6f6fc3bf3ca,
         type: 3}
@@ -883,6 +883,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6172395852406807001, guid: 8f8325c3f4f37e44bbaec6f6fc3bf3ca,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7017838849656751795, guid: 8f8325c3f4f37e44bbaec6f6fc3bf3ca,
         type: 3}
