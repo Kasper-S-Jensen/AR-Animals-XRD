@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.ARFoundation;
 
 public class TouchManager : MonoBehaviour
@@ -65,13 +66,19 @@ public class TouchManager : MonoBehaviour
             }
             */
     }
+
     public void DeleteAllPrefabs(Component sender, object data)
     {
         DestroyByTag("Dog");
         DestroyByTag("Stag");
         DestroyByTag("WolfPortal");
     }
-    
+
+    public void ReloadScene(Component sender, object data)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     private static void DestroyByTag(string tag)
     {
         var objectToDestroy = GameObject.FindWithTag(tag);

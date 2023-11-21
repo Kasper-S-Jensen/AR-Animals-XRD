@@ -1723,8 +1723,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 987116275}
-        m_TargetAssemblyTypeName: SpawnableManager, Assembly-CSharp
-        m_MethodName: DeleteAllPrefabs
+        m_TargetAssemblyTypeName: TouchManager, Assembly-CSharp
+        m_MethodName: ReloadScene
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2993,6 +2993,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.x
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598427334892651621, guid: 2fc2e7b1ac7a0474e91dc380f6bbbc2e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 181.373
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598427334892651621, guid: 2fc2e7b1ac7a0474e91dc380f6bbbc2e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 112.965
       objectReference: {fileID: 0}
     - target: {fileID: 6598427334892651621, guid: 2fc2e7b1ac7a0474e91dc380f6bbbc2e,
         type: 3}
