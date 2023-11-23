@@ -68,6 +68,10 @@ public class SoundManager : MonoBehaviour
     {
         PlayAudioClip("Click");
     }
+    public void AnimalEat(Component sender, object data)
+    {
+        PlayAudioClip("Eat");
+    }
 
 
     private void PlayAudioClip(string clipName)

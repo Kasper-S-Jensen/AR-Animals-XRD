@@ -6,13 +6,15 @@ public class CarnivoreFood : MonoBehaviour
 {
     public LayerMask targetLayer;
     public GameObject explosion;
+    public GameEvent onAnimalEat;
+
 
     // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, 3f);
     }
-    
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -21,6 +23,7 @@ public class CarnivoreFood : MonoBehaviour
         {
             var instantiatedExplosion =
                 Instantiate(explosion, collision.gameObject.transform.position, Quaternion.identity);
+            onAnimalEat.Raise();
             Destroy(instantiatedExplosion, 2f);
             // Destroy the ball when it collides with the player
             Destroy(gameObject);

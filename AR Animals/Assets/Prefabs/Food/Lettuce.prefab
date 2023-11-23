@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b3751476b6e0ba34f8e1f480bc2218b4,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3751476b6e0ba34f8e1f480bc2218b4,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3751476b6e0ba34f8e1f480bc2218b4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3751476b6e0ba34f8e1f480bc2218b4,
         type: 3}
@@ -180,3 +180,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   explosion: {fileID: 1202522996400206, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
+  onAnimalEat: {fileID: 11400000, guid: ac7644352fda14b41a9ecab4a421f8f5, type: 2}
