@@ -23,4 +23,4 @@ https://www.youtube.com/watch?v=8F-2SyyFTM8&ab_channel=KutaibaKashmar
 * 3D assets: https://quaternius.com/ <br/> <br/>
 * PrefabImageManager: https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@3.0/manual/tracked-image-manager.html
 * Sound effects: https://pixabay.com <br/>
-* 3D models: https://quaternius.com/ <br/>
+* Audio manager: https://github.com/Kasper-S-Jensen/GMD-course-project/blob/main/GMD%20Course%20project/Assets/Scripts/Game/SoundManager.cs <br/>
