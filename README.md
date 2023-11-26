@@ -21,4 +21,6 @@ https://www.youtube.com/watch?v=8F-2SyyFTM8&ab_channel=KutaibaKashmar
 
 ### Assets used: <br/>
 * 3D assets: https://quaternius.com/ <br/> <br/>
-* PrefabImageManager: https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@3.0/manual/tracked-image-manager.html 
+* PrefabImageManager: https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@3.0/manual/tracked-image-manager.html
+* Sound effects: https://pixabay.com <br/>
+* 3D models: https://quaternius.com/ <br/>
